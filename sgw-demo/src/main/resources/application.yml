@@ -2,6 +2,8 @@
 #  level:
 #    root: debug
 spring:
+  application:
+    name: spring-gateway-demo
   cloud:
     gateway:
       routes:
