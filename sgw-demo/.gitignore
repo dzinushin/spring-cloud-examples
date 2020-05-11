@@ -30,3 +30,6 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### NodeJS
+node_modules

@@ -26,7 +26,7 @@ public class SgwDemoApplication {
 				.route("route2", r -> {
 					return r.path("/widget-statistics/**")
 							.filters(f -> f.rewritePath("/widget-statistics/(?<segment>.*)", "/${segment}"))
-							.uri("http://localhost:8080");
+							.uri("http://localhost:3000");
 				})
 				.build();
 	}

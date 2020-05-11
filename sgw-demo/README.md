@@ -9,14 +9,19 @@ Man concetps:
 ```shell script
 docker run --rm -p 8080:80 kennethreitz/httpbin
 
+cd nodejs-mcs && npm start 
+
+
 # route to httpbin.org
 echo "payload" | http POST localhost:9000/post
 
-# route to local with rewrite
+# route to local httpbin with rewrite
 http "localhost:9000/local/get?a=b"
 
-# route to local with rewrite
-http "localhost:9000/widget-statistics/get"
+# route to local nodejs mcs with rewrite
+echo '{"msg":"hello" }' | http POST "localhost:9000/widget-statistics/widgets/events/widget1"
+# the same as
+echo '{"msg":"hello" }' | "http POST localhost:3000/widgets/events/widget1"
 ```
 
 
