@@ -1,16 +1,22 @@
 Example of configuring Spring Cloud Gateway
 
+Man concetps:
+
+- Routes
+- Predicates
+- Filters
+
 ```shell script
-docker run --rm -p 8081:80 kennethreitz/httpbin
+docker run --rm -p 8080:80 kennethreitz/httpbin
 
 # route to httpbin.org
-echo "payload" | http POST localhost:8080/post
+echo "payload" | http POST localhost:9000/post
 
 # route to local with rewrite
-http "localhost:8080/local/get?a=b"
+http "localhost:9000/local/get?a=b"
 
 # route to local with rewrite
-http "localhost:8080/widget-statistics/get"
+http "localhost:9000/widget-statistics/get"
 ```
 
 

@@ -21,12 +21,12 @@ public class SgwDemoApplication {
 							.filters(f -> f.addRequestHeader("header1", "header-value-1")
 									.rewritePath("/local/(?<segment>.*)", "/${segment}")
 									)
-							.uri("http://localhost:8081");
+							.uri("http://localhost:8080");
 				})
 				.route("route2", r -> {
 					return r.path("/widget-statistics/**")
 							.filters(f -> f.rewritePath("/widget-statistics/(?<segment>.*)", "/${segment}"))
-							.uri("http://localhost:8081");
+							.uri("http://localhost:8080");
 				})
 				.build();
 	}
