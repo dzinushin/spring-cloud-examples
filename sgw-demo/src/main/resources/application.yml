@@ -1,0 +1,11 @@
+#logging:
+#  level:
+#    root: debug
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: route2
+          uri: http://httpbin.org
+          predicates:
+            - Path=/post
